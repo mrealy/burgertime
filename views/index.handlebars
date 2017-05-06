@@ -1,21 +1,55 @@
-<h1>Burgers To Eat</h1>
+<div class="container">
+  <div class="row">
+    <div class="jumbotron">
+      <h1 class="main-header"> Burger Time! </h1> 
 
-<h3>Enter a burger you want to eat</h3>
+      <h3 class="sub-header">Enter a burger you want to add to the list:</h3>
 
-<form action="/" method="POST">
-  <textarea type="text" name="burger_name"></textarea>
-  <button type="submit">Submit</button>
-</form>
-
-<ul>
-  {{#each burgers}}
-    <li>
-      <form action="/{{this.id}}?_method=PUT" method="POST">
-        <input type="hidden" name="id" value="{{this.id}}">
-        {{!--<button type="submit">Delete</button>--}}
-        <p>Burger Name: {{this.burger_name}}</p>
-        <button type="submit">Devour</button>
+      <form action="/" method="POST" class="re-form">
+        <textarea type="text" name="burger_name"></textarea>
+        <button type="submit" id="header-submit" class="btn-primary">Submit</button>
       </form>
-    </li>
-  {{/each}}
-</ul>
+    </div>
+  </div>
+</div> <!-- end of container -->
+
+<div class="row">
+  <div class="col-lg-6">
+    <h4 class="column-text">Click the devour button to eat it </h4>
+    <ul>
+      {{#each burgers}}
+        {{#unless this.devoured}}
+          <div class="eat-me">
+            <li>
+              <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <p>Burger Name: {{this.burger_name}}</p>
+                <button class="btn-primary btn-sm" type="submit">Devour</button>
+              </form>
+            </li>
+          </div>
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="col-lg-6">
+
+    <h4 class="column-text">List of burgers you've eaten </h4>
+
+    <ul>
+      {{#each burgers}}
+        {{#if this.devoured}}
+          <div class="eaten">
+            <li>
+              <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <p>Burger Name: {{this.burger_name}}</p>
+              </form>
+            </li>
+          </div>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div> <!--end of row-->

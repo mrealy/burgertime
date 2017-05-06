@@ -1,4 +1,5 @@
 var orm = require('../config/orm.js');
+console.log('burger.js file connected');
 
 var burger = {
     create: function(burgerName, callBack) {
@@ -15,7 +16,3 @@ var burger = {
 };
 
 module.exports = burger;
-
-// function callBack(data) {
-//     console.log(data);
-// }

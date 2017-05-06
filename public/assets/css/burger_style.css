@@ -1,0 +1,75 @@
+/*@import url("bootstrap.min.css");
+@import url("bootstrap-theme.css");*/
+
+body {
+    background-color: #ffffb3 !important;
+}
+
+.main-header {
+    text-align: center;
+    color: #4d2600 !important;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-shadow: 2px 2px #e6b800;
+    border-style: solid;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    padding-bottom: 5px;
+    border-color: #009900;
+}
+
+.sub-header {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    color: red;
+}
+
+.re-form {
+    position: relative;
+    left: 420px;
+}
+
+#header-submit {
+    position: relative;
+    top: -15px;
+    background-color: tan;
+    color: #4d2600; 
+}
+
+ul {
+    list-style: none;
+}
+
+.column-text {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-family: "Times New Roman", Times, serif;
+    color: #4d2600 !important;
+}
+
+.eat-me {
+    border-style: solid;
+    border-width: 2px;
+    border-color: green;
+    margin: 5px;
+    padding: 7px 7px 7px 20px;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.eaten {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    margin: 5px;
+    padding: 7px 7px 7px 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.jumbotron {
+    background-color: #ffff80 !important;
+}

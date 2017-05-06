@@ -1,4 +1,4 @@
-var connection = require("../config/connection.js");
+    var connection = require("../config/connection.js");
 
 console.log('orm.js file is connected');
 
